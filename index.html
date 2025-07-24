@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Corredora de propiedades en Santiago. Te ayudo a vender o arrendar tu propiedad de forma segura.">
+  <title>Yuling Properties - Venta y arriendo de propiedades en Santiago</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pastelblue: '#BFD7ED',
+            softpink: '#F6CED8',
+            warmwhite: '#FAF9F6',
+            softgray: '#E8E8E8',
+            primary: '#5C7AEA'
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="font-sans bg-white text-gray-800 leading-relaxed">
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <a id="top"></a>
+
+  <!-- Header -->
+  <header class="bg-[#e5ecff] shadow-md py-6 sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      
+      <a href="#top" class="flex items-center space-x-2 group">
+        <img src="img/logo.png" alt="Yuling Properties Logo" class="w-7 h-7 transition-transform duration-300 group-hover:scale-110">
+        <h1 class="text-2xl font-semibold text-primary tracking-wide">Yuling Properties</h1>
+      </a>
+
+      <nav class="hidden md:flex space-x-6 text-[#3b3b3b] text-sm font-medium">
+        <a href="#top" class="hover:text-[#587ff8] transition">Inicio</a>
+        <a href="#propiedades" class="hover:text-[#587ff8] transition">Propiedades</a>
+        <a href="#sobre-mi" class="hover:text-[#587ff8] transition">Sobre mí</a>
+        <a href="#contacto" class="hover:text-[#587ff8] transition">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- top -->
+  <section class="relative h-[80vh] md:h-[92vh] bg-cover bg-center text-white" style="background-image: url('img/hero.jpg');">
+    <section class="relative h-[80vh] md:h-[92vh] bg-cover bg-center text-white" style="background-image: url('img/hero.jpg');">
+
+      <div class="absolute inset-0 bg-black/40 z-10"></div>
+      <div class="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6">
+
+        <div class="bg-black/40 backdrop-blur-sm rounded-xl px-6 py-6 max-w-3xl w-full mx-auto" data-aos="fade-up">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight text-white">
+            Encuentra la propiedad que estás buscando en <span class="text-primary">Santiago</span>
+          </h2>
+          <p class="text-base sm:text-lg text-white">
+            ¿Tienes una propiedad? Te ayudo a venderla o arrendarla de forma segura y confiable.
+          </p>
+        </div>
+
+        <!-- Botón con animación -->
+        <a href="#contacto"
+          class="mt-6 bg-primary text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition text-sm sm:text-base"
+          data-aos="zoom-in"
+          data-aos-delay="300">
+          Contáctame
+        </a>
+
+      </div>
+    </section>
+  </section>
+
+  <!-- Propiedades -->
+  <section id="propiedades" class="scroll-mt-28 bg-[#f4f4f5] py-16 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-10" data-aos="fade-up">Propiedades</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Tarjeta de propiedad -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto" data-aos="fade-up">
+          <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-sm">
+            Foto próximamente
+            <!-- <img src="img/depto-nunoa.jpg" alt="Depto en Ñuñoa" class="h-48 w-full object-cover"> -->
+          </div>
+          <div class="p-6 text-left">
+            <h3 class="text-xl font-semibold text-primary mb-1">Depto en Ñuñoa</h3>
+            <p class="text-sm text-gray-600 mb-2">José Domingo Cañas, Ñuñoa</p>
+            <p class="text-gray-700 text-sm mb-4">Departamento arrendado, muy bien ubicado, luminoso, ideal para vivir en barrio tranquilo y cercano a servicios.</p>
+            <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded">Arrendado</span>
+          </div>
+        </div>
+
+        <!-- Segunda propiedad -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto" data-aos="fade-up">
+          <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-sm">
+            Foto próximamente
+            <!-- <img src="img/casa-sanjoaquin.jpg" alt="Casa Gluck" class="h-48 w-full object-cover"> -->
+          </div>
+          <div class="p-6 text-left">
+            <h3 class="text-xl font-semibold text-primary mb-1">Casa en San Joaquín</h3>
+            <p class="text-sm text-gray-600 mb-2">Gluck, San Joaquín</p>
+            <p class="text-gray-700 text-sm mb-4">Casa arrendada. Ideal para familia, con patio amplio y excelente conectividad al metro Rodrigo de Araya.</p>
+            <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded">Arrendado</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="sobre-mi" class="bg-[#ece9f9] py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-xl shadow-xl p-6 md:p-12 text-center" data-aos="fade-up">
+        <div class="flex flex-col items-center">
+          <img src="img/yuling.png" alt="Foto de Yuling" class="w-28 h-28 sm:w-32 sm:h-32 rounded-full shadow-md mb-6 object-cover" />
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Hola, soy Yuling 👋</h2>
+          <p class="text-gray-700 text-base sm:text-lg max-w-md sm:max-w-xl">
+          Soy corredora de propiedades. Ayudo a personas a vender o arrendar su hogar con transparencia, dedicación y cercanía.  
+          Estoy aquí para acompañarte en cada paso del proceso, con compromiso y profesionalismo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="scroll-mt-28 bg-[#f4f4f5] py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white shadow-xl rounded-xl p-6 md:p-12" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">📩 Contáctame</h2>
+        <p class="text-center text-gray-600 mb-10 max-w-xl mx-auto">
+        ¿Quieres vender o arrendar tu propiedad?  
+        Escríbeme y conversemos. Estoy aquí para ayudarte.
+        </p>
+        <form action="https://formspree.io/f/xdkdozlj" method="POST" class="grid grid-cols-1 gap-6">
+          <input type="text" name="nombre" placeholder="👤 Nombre" required class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" />
+          <input type="email" name="email" placeholder="📧 Correo electrónico" required class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" />
+          <textarea name="mensaje" placeholder="📝 Tu mensaje" rows="4" required class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+          <button type="submit" class="bg-primary text-white py-3 rounded-lg shadow-md hover:bg-blue-600 transition">
+            Enviar mensaje
+          </button>
+          <input type="hidden" name="_redirect" value="https://Yianfri.github.io/yuling-properties/gracias.html">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#f5f5f7] text-center text-sm p-4 flex flex-col items-center gap-1">
+    <div class="flex items-center gap-2">
+      <img src="img/favicon.png" alt="logo" class="w-5 h-5 opacity-70">
+      <span class="text-gray-600 text-sm">© 2025 Yuling Properties. Todos los derechos reservados.</span>
+    </div>
+  </footer>
+
+<!-- Botón "Volver arriba" -->
+<a href="#top" id="scrollTopBtn"
+   class="hidden opacity-0 fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-500 z-50"
+   title="Volver arriba">
+   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+    <path d="M10 3a1 1 0 01.894.553l5 10a1 1 0 01-1.788.894L10 6.618 5.894 14.447a1 1 0 01-1.788-.894l5-10A1 1 0 0110 3z"/>
+   </svg>
+
+</a>
+
+<script>
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  let visible = false;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      if (!visible) {
+        scrollTopBtn.classList.remove('hidden');
+        scrollTopBtn.classList.remove('opacity-0');
+        scrollTopBtn.classList.add('opacity-100');
+        visible = true;
+      }
+    } else {
+      if (visible) {
+        scrollTopBtn.classList.remove('opacity-100');
+        scrollTopBtn.classList.add('opacity-0');
+        // esperamos la transición y luego lo ocultamos
+        setTimeout(() => {
+          if (window.scrollY <= 300) {
+            scrollTopBtn.classList.add('hidden');
+            visible = false;
+          }
+        }, 500);
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
