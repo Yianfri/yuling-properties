@@ -2,7 +2,13 @@
 <html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Corredora de propiedades en Santiago. Te ayudo a vender o arrendar tu propiedad de forma segura.">
+  <meta property="og:title" content="Yuling Properties — Corredora de propiedades en Santiago">
+  <meta property="og:description" content="Asesoría para vender o arrendar.">
+  <meta property="og:image" content="https://yianfri.github.io/yuling-properties/img/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yianfri.github.io/yuling-properties/">
   <title>Yuling Properties - Venta y arriendo de propiedades en Santiago</title>
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -28,116 +34,137 @@
     }
   </script>
 
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"RealEstateAgent",
+    "name":"Yuling Properties",
+    "areaServed":"Santiago, Chile",
+    "url":"https://yianfri.github.io/yuling-properties/",
+    "image":"https://yianfri.github.io/yuling-properties/img/logo.png",
+    "telephone":"+56912345678",
+    "address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"}
+  }
+  </script>
+
 </head>
 
-<body class="font-sans bg-white text-gray-800 leading-relaxed">
+<body class="font-sans bg-white text-gray-800 leading-relaxed text-[16px]">
+  <script>
+    window.addEventListener('load', () => {
+      AOS.init({ duration: 800, once: true });
+    });
+  </script>
 
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-    </script>
-    <a id="top"></a>
+  <a id="top"></a>
 
   <!-- Header -->
-  <header class="bg-[#e5ecff] shadow-md py-6 sticky top-0 z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-      
-      <a href="#top" class="flex items-center space-x-2 group">
-        <img src="img/logo.png" alt="Yuling Properties Logo" class="w-7 h-7 transition-transform duration-300 group-hover:scale-110">
-        <h1 class="text-2xl font-semibold text-primary tracking-wide">Yuling Properties</h1>
+  <header class="bg-[#e5ecff] shadow-md sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 group">
+        <img src="img/logo.png" alt="Yuling Properties Logo" class="w-8 h-8 transition-transform duration-300 group-hover:scale-110">
+        <span class="text-xl sm:text-2xl font-semibold text-primary tracking-wide">Yuling Properties</span>
       </a>
 
-      <nav class="hidden md:flex space-x-6 text-[#3b3b3b] text-sm font-medium">
+      <!-- Botón hamburguesa (mobile) -->
+      <button id="menuBtn" aria-label="Abrir menú" class="md:hidden p-2 rounded-lg hover:bg-white/60 focus:outline-none focus:ring-2 focus:ring-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#3b3b3b]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+
+      <!-- Nav desktop -->
+      <nav class="hidden md:flex items-center gap-6 text-[#3b3b3b] text-sm font-medium">
         <a href="#top" class="hover:text-[#587ff8] transition">Inicio</a>
         <a href="#propiedades" class="hover:text-[#587ff8] transition">Propiedades</a>
         <a href="#sobre-mi" class="hover:text-[#587ff8] transition">Sobre mí</a>
         <a href="#contacto" class="hover:text-[#587ff8] transition">Contacto</a>
       </nav>
     </div>
+
+    <!-- Menú móvil desplegable -->
+    <nav id="mobileMenu" class="md:hidden hidden border-t border-white/50 bg-[#e5ecff]">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-3 text-base">
+        <a href="#top" class="py-1">Inicio</a>
+        <a href="#propiedades" class="py-1">Propiedades</a>
+        <a href="#sobre-mi" class="py-1">Sobre mí</a>
+        <a href="#contacto" class="py-1">Contacto</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- top -->
-  <section class="relative h-[80vh] md:h-[92vh] bg-cover bg-center text-white" style="background-image: url('img/hero.jpg');">
-    <section class="relative h-[80vh] md:h-[92vh] bg-cover bg-center text-white" style="background-image: url('img/hero.jpg');">
-
-      <div class="absolute inset-0 bg-black/40 z-10"></div>
-      <div class="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6">
-
-        <div class="bg-black/40 backdrop-blur-sm rounded-xl px-6 py-6 max-w-3xl w-full mx-auto" data-aos="fade-up">
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight text-white">
-            Vende o arrienda tu propiedad en <span class="text-primary">Santiago</span>
-          </h2>
-          <p class="text-base sm:text-lg text-white">
-            ¿Tienes una propiedad? Te ayudo a venderla o arrendarla de forma segura y confiable.
-          </p>
-        </div>
-
-        <!-- Botón con animación -->
-        <a href="#contacto"
-          class="mt-6 bg-primary text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition text-sm sm:text-base"
-          data-aos="zoom-in"
-          data-aos-delay="300">
-          Contáctame
-        </a>
-
+  <!-- Hero -->
+  <section class="relative min-h-[80svh] md:min-h-[92svh] bg-cover bg-center text-white" style="background-image: url('img/hero.jpg');">
+    <div class="absolute inset-0 bg-black/40 z-10"></div>
+    <div class="relative z-20 flex flex-col items-center justify-center min-h-[80svh] md:min-h-[92svh] text-center px-4 sm:px-6">
+      <div class="bg-black/40 backdrop-blur-sm rounded-xl px-5 sm:px-6 py-6 max-w-[92%] sm:max-w-2xl md:max-w-3xl w-full mx-auto" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
+          Vende o arrienda tu propiedad en <span class="text-primary">Santiago</span>
+        </h2>
+        <p class="text-[15px] sm:text-lg">
+          ¿Tienes una propiedad? Te ayudo a venderla o arrendarla de forma segura y confiable.
+        </p>
       </div>
-    </section>
+
+      <a href="#contacto"
+         class="mt-5 sm:mt-6 bg-primary text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition text-sm sm:text-base"
+         data-aos="zoom-in" data-aos-delay="300">
+        Contáctame
+      </a>
+    </div>
   </section>
 
   <!-- Propiedades -->
-  <section id="propiedades" class="scroll-mt-28 bg-[#f4f4f5] py-16 px-6">
+  <section id="propiedades" class="scroll-mt-28 bg-[#f4f4f5] py-14 sm:py-16 px-4 sm:px-6">
     <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-10" data-aos="fade-up">Propiedades</h2>
+      <h2 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-10" data-aos="fade-up">Propiedades</h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Tarjeta de propiedad -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto" data-aos="fade-up">
-          <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-sm">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Tarjeta -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-md mx-auto" data-aos="fade-up">
+          <div class="h-44 sm:h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-sm">
             Foto próximamente
             <!-- <img src="img/depto-nunoa.jpg" alt="Depto en Ñuñoa" class="h-48 w-full object-cover"> -->
           </div>
-          <div class="p-6 text-left">
-            <h3 class="text-xl font-semibold text-primary mb-1">Depto en Ñuñoa</h3>
+          <div class="p-5 sm:p-6 text-left">
+            <h3 class="text-lg sm:text-xl font-semibold text-primary mb-1">Depto en Ñuñoa</h3>
             <p class="text-sm text-gray-600 mb-2">José Domingo Cañas, Ñuñoa</p>
-            <p class="text-gray-700 text-sm mb-4">Departamento arrendado, muy bien ubicado, luminoso, ideal para vivir en barrio tranquilo y cercano a servicios.</p>
+            <p class="text-gray-700 text-[15px] mb-4">Departamento arrendado, muy bien ubicado, luminoso, ideal para vivir en barrio tranquilo y cercano a servicios.</p>
             <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded">Arrendado</span>
           </div>
-        </div>
+        </article>
 
-        <!-- Segunda propiedad -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto" data-aos="fade-up">
-          <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-sm">
+        <!-- Tarjeta -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-md mx-auto" data-aos="fade-up">
+          <div class="h-44 sm:h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-sm">
             Foto próximamente
             <!-- <img src="img/casa-sanjoaquin.jpg" alt="Casa Gluck" class="h-48 w-full object-cover"> -->
           </div>
-          <div class="p-6 text-left">
-            <h3 class="text-xl font-semibold text-primary mb-1">Casa en San Joaquín</h3>
+          <div class="p-5 sm:p-6 text-left">
+            <h3 class="text-lg sm:text-xl font-semibold text-primary mb-1">Casa en San Joaquín</h3>
             <p class="text-sm text-gray-600 mb-2">Gluck, San Joaquín</p>
-            <p class="text-gray-700 text-sm mb-4">Casa arrendada. Ideal para familia, con patio amplio y excelente conectividad al metro Rodrigo de Araya.</p>
-            <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded">Arrendado</span>
+            <p class="text-gray-700 text-[15px] mb-4">Casa arrendada. Ideal para familia, con patio amplio y excelente conectividad al metro Rodrigo de Araya.</p>
+            <span class="inline-block bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded">Vendida</span>
           </div>
-        </div>
-
+        </article>
       </div>
     </div>
   </section>
 
   <!-- Sobre mí -->
-  <section id="sobre-mi" class="bg-[#ece9f9] py-20">
+  <section id="sobre-mi" class="bg-[#ece9f9] py-16 sm:py-20">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <div class="bg-white rounded-xl shadow-xl p-6 md:p-12 text-center" data-aos="fade-up">
+      <div class="bg-white rounded-xl shadow-xl p-6 sm:p-8 md:p-12 text-center" data-aos="fade-up">
         <div class="flex flex-col items-center">
-          <img src="img/yuling.png" alt="Foto de Yuling" class="w-28 h-28 sm:w-32 sm:h-32 rounded-full shadow-md mb-6 object-cover" />
-          <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Hola, soy Yuling 👋</h2>
-          <p class="text-gray-700 text-base sm:text-lg max-w-md sm:max-w-xl">
-          Soy corredora de propiedades. Ayudo a personas a vender o arrendar su hogar con transparencia, dedicación y cercanía.  
-          Estoy aquí para acompañarte en cada paso del proceso, con compromiso y profesionalismo.
+          <img src="img/yuling.png" alt="Foto de Yuling" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full shadow-md mb-5 sm:mb-6 object-cover" />
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">Hola, soy Yuling 👋</h2>
+          <p class="text-gray-700 text-[15px] sm:text-lg max-w-md sm:max-w-xl">
+            Soy corredora de propiedades. Ayudo a personas a vender o arrendar su hogar con transparencia, dedicación y cercanía.
+            Estoy aquí para acompañarte en cada paso del proceso, con compromiso y profesionalismo.
           </p>
         </div>
       </div>
@@ -145,23 +172,68 @@
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="scroll-mt-28 bg-[#f4f4f5] py-20">
+  <section id="contacto" class="scroll-mt-28 bg-[#f4f4f5] py-16 sm:py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="bg-white shadow-xl rounded-xl p-6 md:p-12" data-aos="fade-up">
-        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">📩 Contáctame</h2>
-        <p class="text-center text-gray-600 mb-10 max-w-xl mx-auto">
-        ¿Quieres vender o arrendar tu propiedad?  
-        Escríbeme y conversemos. Estoy aquí para ayudarte.
+      <div class="bg-white shadow-xl rounded-xl p-6 sm:p-8 md:p-12" data-aos="fade-up">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4 sm:mb-6">📩 Contáctame</h2>
+        <p class="text-center text-gray-600 mb-8 sm:mb-10 max-w-xl mx-auto">
+          ¿Quieres vender o arrendar tu propiedad? Escríbeme y conversemos. Estoy aquí para ayudarte.
         </p>
-        <form action="https://formspree.io/f/xdkdozlj" method="POST" class="grid grid-cols-1 gap-6">
-          <input type="text" name="nombre" placeholder="👤 Nombre" required class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" />
-          <input type="email" name="email" placeholder="📧 Correo electrónico" required class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" />
-          <textarea name="mensaje" placeholder="📝 Tu mensaje" rows="4" required class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
-          <button type="submit" class="bg-primary text-white py-3 rounded-lg shadow-md hover:bg-blue-600 transition">
-            Enviar mensaje
-          </button>
-          <input type="hidden" name="_redirect" value="https://Yianfri.github.io/yuling-properties/gracias.html">
-        </form>
+
+      <form action="https://formspree.io/f/xdkdozlj" method="POST" class="grid grid-cols-1 gap-4 sm:gap-6" id="contactForm" novalidate>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_subject" value="Nuevo contacto desde Yuling Properties">
+
+        <!-- Nombre -->
+        <input type="text" name="name" autocomplete="name" placeholder="👤 Nombre"
+              required class="p-3 sm:p-4 rounded-lg border border-gray-300 text-[16px] focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Nombre" />
+        <p id="nameError" class="hidden text-red-600 text-sm mt-1">Por favor ingresa tu nombre.</p>
+
+        <!-- Email -->
+        <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="📧 Correo electrónico"
+              required class="p-3 sm:p-4 rounded-lg border border-gray-300 text-[16px] focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Correo electrónico" />
+        <p id="emailError" class="hidden text-red-600 text-sm mt-1">Ingresa un correo válido (ej: nombre@dominio.com).</p>
+
+        <!-- Motivo -->
+        <select name="reason" required
+                class="p-3 sm:p-4 rounded-lg border border-gray-300 text-[16px] focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Motivo del contacto">
+          <option value="">— Motivo del contacto —</option>
+          <option>Quiero vender una propiedad</option>
+          <option>Quiero arrendar mi propiedad</option>
+          <option>Busco propiedad para vivir</option>
+          <option>Consulta general</option>
+        </select>
+        <p id="reasonError" class="hidden text-red-600 text-sm mt-1">Selecciona el motivo del contacto.</p>
+
+        <!-- Mensaje -->
+        <textarea name="message" placeholder="📝 Cuéntame brevemente (dirección/comuna, m², dormitorios… si aplica)" rows="4" required
+                  class="p-3 sm:p-4 rounded-lg border border-gray-300 text-[16px] focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Mensaje"></textarea>
+        <p id="messageError" class="hidden text-red-600 text-sm mt-1">Escribe un mensaje (puede ser breve).</p>
+
+        <!-- Preferencia (opcional) -->
+        <select name="contact_pref"
+                class="p-3 sm:p-4 rounded-lg border border-gray-300 text-[16px] focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Preferencia de contacto (opcional)">
+          <option value="">— ¿Cómo prefieres que te contacten? (opcional) —</option>
+          <option>Responder por correo</option>
+          <option>Llamada telefónica</option>
+          <option>Mensaje por WhatsApp</option>
+        </select>
+
+        <!-- Consentimiento -->
+        <label class="flex items-start gap-3 text-sm text-gray-600">
+          <input type="checkbox" id="consentCheck" required class="mt-1">
+          <span>Acepto ser contactad@ respecto a esta consulta. No compartimos tus datos con terceros.</span>
+        </label>
+        <p id="consentError" class="hidden text-red-600 text-sm -mt-2 mb-2">Debes aceptar para poder enviar.</p>
+
+        <input type="hidden" name="_redirect" value="https://Yianfri.github.io/yuling-properties/gracias.html">
+
+        <button type="submit" id="submitBtn"
+                class="mt-2 bg-primary text-white py-3 sm:py-3.5 rounded-lg shadow-md hover:bg-blue-600 transition text-[16px] disabled:opacity-60 disabled:cursor-not-allowed">
+          Enviar mensaje
+        </button>
+      </form>
+
       </div>
     </div>
   </section>
@@ -174,43 +246,151 @@
     </div>
   </footer>
 
-<!-- Botón "Volver arriba" -->
-<a href="#top" id="scrollTopBtn"
-   class="hidden opacity-0 fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-500 z-50"
-   title="Volver arriba">
-   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-    <path d="M10 3a1 1 0 01.894.553l5 10a1 1 0 01-1.788.894L10 6.618 5.894 14.447a1 1 0 01-1.788-.894l5-10A1 1 0 0110 3z"/>
-   </svg>
+  <!-- Botón "Volver arriba" -->
+  <a href="#top" id="scrollTopBtn"
+    class="hidden opacity-0 fixed bottom-6 right-6 bg-primary text-white p-3 sm:p-3.5 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-500 z-50"
+    title="Volver arriba" aria-label="Volver arriba">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+      <path d="M10 3a1 1 0 01.894.553l5 10a1 1 0 01-1.788.894L10 6.618 5.894 14.447a1 1 0 01-1.788-.894l5-10A1 1 0 0110 3z"/>
+    </svg>
+  </a>
 
-</a>
+  <script>
+    // Menú móvil
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
 
-<script>
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
-  let visible = false;
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      if (!visible) {
-        scrollTopBtn.classList.remove('hidden');
-        scrollTopBtn.classList.remove('opacity-0');
-        scrollTopBtn.classList.add('opacity-100');
-        visible = true;
-      }
-    } else {
-      if (visible) {
+    // ScrollTop
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    let visible = false;
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        if (!visible) {
+          scrollTopBtn.classList.remove('hidden', 'opacity-0');
+          scrollTopBtn.classList.add('opacity-100');
+          visible = true;
+        }
+      } else if (visible) {
         scrollTopBtn.classList.remove('opacity-100');
         scrollTopBtn.classList.add('opacity-0');
-        // esperamos la transición y luego lo ocultamos
         setTimeout(() => {
           if (window.scrollY <= 300) {
             scrollTopBtn.classList.add('hidden');
             visible = false;
           }
-        }, 500);
+        }, 300);
       }
-    }
-  });
-</script>
+    });
+  </script>
+
+  <script>
+  (function () {
+    const form = document.getElementById('contactForm');
+    const btn  = document.getElementById('submitBtn');
+    const consent = document.getElementById('consentCheck');
+
+    // utilidades
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const show = (el) => el.classList.remove('hidden');
+    const hide = (el) => el.classList.add('hidden');
+    const markError = (field, errorEl) => {
+      field.classList.add('border-red-500', 'focus:ring-red-500');
+      field.setAttribute('aria-invalid', 'true');
+      if (errorEl) show(errorEl);
+    };
+    const clearError = (field, errorEl) => {
+      field.classList.remove('border-red-500', 'focus:ring-red-500');
+      field.removeAttribute('aria-invalid');
+      if (errorEl) hide(errorEl);
+    };
+
+    // live validation: limpia error cuando el usuario escribe/cambia
+    const nameEl = form.querySelector('[name="name"]');
+    const emailEl = form.querySelector('[name="email"]');
+    const reasonEl = form.querySelector('[name="reason"]');
+    const messageEl = form.querySelector('[name="message"]');
+
+    nameEl.addEventListener('input', () => clearError(nameEl, document.getElementById('nameError')));
+    emailEl.addEventListener('input', () => clearError(emailEl, document.getElementById('emailError')));
+    reasonEl.addEventListener('change', () => clearError(reasonEl, document.getElementById('reasonError')));
+    messageEl.addEventListener('input', () => clearError(messageEl, document.getElementById('messageError')));
+    consent.addEventListener('change', () => clearError(consent, document.getElementById('consentError')));
+
+    // anti-bot / anti doble clic
+    let armed = false;
+    btn.disabled = true;
+    setTimeout(() => { btn.disabled = false; armed = true; }, 4000);
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // limpia errores previos
+      clearError(nameEl, document.getElementById('nameError'));
+      clearError(emailEl, document.getElementById('emailError'));
+      clearError(reasonEl, document.getElementById('reasonError'));
+      clearError(messageEl, document.getElementById('messageError'));
+      clearError(consent, document.getElementById('consentError'));
+
+      // valida
+      let firstInvalid = null;
+
+      if (!nameEl.value.trim()) {
+        markError(nameEl, document.getElementById('nameError'));
+        firstInvalid = firstInvalid || nameEl;
+      }
+      if (!emailPattern.test(emailEl.value.trim())) {
+        markError(emailEl, document.getElementById('emailError'));
+        firstInvalid = firstInvalid || emailEl;
+      }
+      if (!reasonEl.value.trim()) {
+        markError(reasonEl, document.getElementById('reasonError'));
+        firstInvalid = firstInvalid || reasonEl;
+      }
+      if (!messageEl.value.trim()) {
+        markError(messageEl, document.getElementById('messageError'));
+        firstInvalid = firstInvalid || messageEl;
+      }
+      if (!consent.checked) {
+        markError(consent, document.getElementById('consentError'));
+        firstInvalid = firstInvalid || consent;
+      }
+
+      if (firstInvalid) {
+        // enfoca el primer campo inválido
+        if (typeof firstInvalid.focus === 'function') firstInvalid.focus();
+        return;
+      }
+
+      if (!armed || btn.disabled) return;
+
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = 'gracias.html';
+        } else {
+          alert('Ocurrió un error al enviar. Intenta nuevamente más tarde.');
+          btn.disabled = false;
+          btn.textContent = 'Enviar mensaje';
+        }
+      })
+      .catch(() => {
+        alert('Error de conexión. Intenta más tarde.');
+        btn.disabled = false;
+        btn.textContent = 'Enviar mensaje';
+      });
+    });
+  })();
+  </script>
 
 </body>
 </html>

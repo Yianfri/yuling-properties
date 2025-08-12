@@ -41,10 +41,6 @@ yuling-properties/
 
 Yuling es corredora de propiedades con experiencia en arriendos y ventas en el sector oriente y sur de Santiago. Trabaja con compromiso, transparencia y atención cercana para ayudarte a vender o arrendar tu propiedad de forma segura.
 
-## 📬 Contacto
-
-¿Te gustó el sitio? ¿Quieres hacer uno similar?
-
 - Desarrollado por [Gianfranco Rolla](https://github.com/Yianfri)
 - 🐣 Proyecto personal · 2025
 
